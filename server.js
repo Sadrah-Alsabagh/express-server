@@ -8,12 +8,12 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 
-// Create a / route using GET method 
+// Create route by GET method 
 app.get('/', (req, res) => {
     res.status(200).send('Hello World');
 });
 
-// Create a person route using POST method 
+// Create a person route by POST method 
 app.post('/person', (req, res) => {
     
     const name = req.query.name;
