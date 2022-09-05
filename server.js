@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3001;
 
 // Create a / route using GET method 
 app.get('/', (req, res) => {
@@ -24,7 +24,7 @@ app.post('/person', (req, res) => {
 });
 
 function start(port) {
-    app.listen(PORT, () => console.log(`Server Starting on ${PORT}`));
+    app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 }
 
 module.exports = {
