@@ -8,7 +8,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 
-// Create a route using GET method 
+// Create route using GET method 
 app.get('/', (req, res) => {
     res.status(200).send('Hello World');
 });
