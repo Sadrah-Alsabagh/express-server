@@ -6,16 +6,16 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3001;
 
-// Create a / route using GET method 
+// Create a route using GET method 
 app.get('/', (req, res) => {
     res.status(200).send('Hello World');
 });
 
 // Create a person route using POST method 
 app.post('/person', (req, res) => {
-    
+
     const name = req.query.name;
     const age = req.query.age;
     const gender = req.query.gender;
@@ -24,7 +24,7 @@ app.post('/person', (req, res) => {
 });
 
 function start(port) {
-    app.listen(PORT, () => console.log(`Server Starting on ${PORT}`));
+    app.listen(PORT, () => console.log(`Server is listining on ${PORT}`));
 }
 
 module.exports = {

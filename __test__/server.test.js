@@ -17,7 +17,7 @@ describe( 'API server', () => {
         const res = await request.post( '/person' ).query( {
             name: 'Sedra',
             age: 21,
-            gender: 'female'
+            gender: 'female',
         });
         expect(res.status).toEqual(200);
         expect(res.text).toEqual('26');
