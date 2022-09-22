@@ -15,11 +15,12 @@ app.get('/', (req, res) => {
 
 // Create a person route by POST method 
 app.post('/person', (req, res) => {
-    
+    const data = req.body;
+
     const name = req.query.name;
     const age = req.query.age;
     const gender = req.query.gender;
-    const newAge = parseInt(age) + 5
+    const newAge = data.age+5;
     res.status(200).send(`${newAge}`);
 });
 
